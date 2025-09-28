@@ -9,30 +9,6 @@
     --transition: all 0.3s ease;
 }
 
-@keyframes circle-in-hesitate {
-  0% {
-    clip-path: circle(0%);
-  }
-  40% {
-    clip-path: circle(40%);
-  }
-  100% {
-    clip-path: circle(125%);
-  }
-}
-
-
-.inicio[transition-style="in:circle:hesitate"] {
-    animation:
-        2.5s cubic-bezier(.25, 1, .30, 1) circle-in-hesitate both,
-        fondo-morado-a-negro 2.5s cubic-bezier(.25, 1, .30, 1) forwards;
-}
-
-.inicio {
-    background-color: var(--gray-dark);
-    transition: background 0.3s;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -129,21 +105,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: #aa00ff; /* Morado por defecto */
-    animation: fondo-morado-a-negro 2.5s cubic-bezier(.25, 1, .30, 1) forwards;
-}
-
-@keyframes fondo-morado-a-negro {
-    0% {
-        background: #aa00ff;
-    }
-    100% {
-        background: #000;
-    }
-}
-
-[transition-style="in:circle:hesitate"].seccion-inicio {
-    background: #000; /* Negro durante la animación */
+    background: var(--gray-dark)
 }
 
 .nombre {
@@ -200,3 +162,87 @@ body {
     box-shadow: 0 2px 8px rgba(170, 0, 255, 0.12);
 }
 
+/* Apartado sobre mi */
+
+#sobremi {
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--gray-medium);
+    flex-direction: column;
+    margin-bottom: 40px;
+    padding: 40px 0;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+
+/* Apartado educacion */
+
+#educacion {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--gray-light);
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Apartado experiencia */
+
+#experiencia {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--gray-light);
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Apartado habilidades */
+
+#habilidades {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--gray-dark);
+    flex-direction: column;
+    gap: 20px;
+}
+
+#habilidades img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Apartado contacto */
+
+#contacto {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--gray-dark);
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Apartado pie de pagina */
+
+.pie-pagina {
+    background-color: var(--black);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: var(--white);
+}
