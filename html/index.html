@@ -1,98 +1,209 @@
-'='<html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yusef Laroussi de la Calle - Portfolio</title>
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <section id="inicio">
-        <h1>Yusef Laroussi de la Calle</h1>
-        <p>Programador Junior</p>
-    </section>
+    <header class="cabecera">
+        <nav class="navegacion">
+            <div class="contenedor-navegacion">
+                <h1 class="logo-navegacion">Yusef Laroussi de la Calle</h1>
+                <ul class="menu-navegacion">
+                    <li><a href="#inicio" class="enlace-navegacion">Inicio</a></li>
+                    <li><a href="#sobremi" class="enlace-navegacion">Sobre mí</a></li>
+                    <li><a href="#educacion" class="enlace-navegacion">Educación</a></li>
+                    <li><a href="#experiencia" class="enlace-navegacion">Experiencia</a></li>
+                    <li><a href="#habilidades" class="enlace-navegacion">Habilidades</a></li>
+                    <li><a href="#contacto" class="enlace-navegacion">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    <section id="sobremi">
-        <h2>Sobre mí</h2>
-        <p>Soy un programador junior, especializado en desarrollo front-end, con conocimientos adicionales en tecnologías back-end. 
-            También cuento con amplia experiencia en hardware y software de ordenador. Me considero un profesional ambicioso y de rápido 
-            aprendizaje, con un gran deseo de crecer y asumir nuevos desafíos.</p>
-    </section>
+    <main>
+        <section id="inicio" class="seccion-inicio" transition-style="in:circle:hesitate">
+            <div class="contenido-seccion-inicio">
+                <h1>Yusef Laroussi de la Calle</h1>
+                <p class="subtitulo-seccion-inicio">Programador Junior & Técnico en Informática</p>
+                <div class="botones-seccion-inicio">
+                    <a href="#contacto" class="boton boton-primario">Contáctame</a>
+                    <a href="#experiencia" class="boton boton-secundario">Ver experiencia</a>
+                </div>
+            </div>
+        </section>
 
-    <section id="educacion">
-        <h2>Educación</h2>
+        <section id="sobremi" class="seccion">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Sobre mí</h2>
+                <div class="contenido-sobre-mi">
+                    <p>Soy un programador junior, especializado en desarrollo front-end, con conocimientos adicionales
+                        en
+                        tecnologías back-end.
+                        También cuento con amplia experiencia en hardware y software de ordenador. Me considero un
+                        profesional
+                        ambicioso y de rápido aprendizaje, con un gran deseo de crecer y asumir nuevos desafíos.</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="ed1">
-            <h3>Educación Secundaria Obligatoria - IES Alagon</h3>
-            <p>Coria, Caceres / 2016 - 2020</p>
+        <section id="educacion" class="seccion fondo-gris">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Educación</h2>
+                <div class="rejilla-educacion">
+                    <div class="elemento-educacion">
+                        <h3>Educación Secundaria Obligatoria - IES Alagón</h3>
+                        <p class="fecha-educacion">Coria, Cáceres / 2016 - 2020</p>
+                        <div class="barra-educacion"></div>
+                    </div>
+
+                    <div class="elemento-educacion">
+                        <h3>Grado Medio en Sistemas Microinformáticos y Redes - IES Valle del Jerte</h3>
+                        <p class="fecha-educacion">Plasencia, Cáceres / 2021 - 2023</p>
+                        <div class="barra-educacion"></div>
+                    </div>
+
+                    <div class="elemento-educacion">
+                        <h3>Grado Superior en Desarrollo de Aplicaciones Web - IES Valle del Jerte</h3>
+                        <p class="fecha-educacion">Plasencia, Cáceres / 2023 - 2026</p>
+                        <div class="barra-educacion"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experiencia" class="seccion">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Experiencia Laboral</h2>
+                <div class="rejilla-experiencia">
+                    <div class="elemento-experiencia">
+                        <h3>Asistente Técnico Informático</h3>
+                        <p class="empresa-experiencia">IES Alagón</p>
+                        <p class="fecha-experiencia">Marzo - Abril 2024</p>
+                        <ul class="lista-experiencia">
+                            <li>Reparación y mantenimiento de hardware de ordenadores.</li>
+                            <li>Instalación y configuración de sistemas operativos.</li>
+                            <li>Configuración y administración de software en Linux tanto mediante CLI como entorno
+                                grafico.</li>
+                        </ul>
+                    </div>
+
+                    <div class="elemento-experiencia">
+                        <h3>Gerente de Medios Digitales y Redes Sociales</h3>
+                        <p class="empresa-experiencia">Zanzi Homes</p>
+                        <p class="fecha-experiencia">Abril - Mayo 2024</p>
+                        <ul class="lista-experiencia">
+                            <li>Administrador de Redes Sociales, actualizando y editando contenido.</li>
+                            <li>Programación en HTML para firmas de correo electrónico.</li>
+                            <li>Edición de fotos y creación de contenido.</li>
+                        </ul>
+                    </div>
+
+                    <div class="elemento-experiencia">
+                        <h3>Administrador de bases de datos</h3>
+                        <p class="empresa-experiencia">Layer Electronics</p>
+                        <p class="fecha-experiencia">Mayo - Junio 2025</p>
+                        <ul class="lista-experiencia">
+                            <li>Gestión de la base de datos empresarial, utilizando Filemaker.</li>
+                            <li>Diseño de interfaces mediante Filemaker.</li>
+                            <li>Optimización mediante scripts de la base de datos.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="seccion fondo-gris">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Habilidades</h2>
+                <div class="categoria-habilidad">
+                    <h3>Front-End & Markup Languages</h3>
+                    <span class="elemento-habilidad"><img src="../img/html5logo.png" alt="html5">HTML</span>
+                    <span class="elemento-habilidad"><img src="../img/CSS3logo.png" alt="css3">CSS</span>
+                    <span class="elemento-habilidad"><img src="../img/javascriptlogo.png" alt="js">JavaScript</span>
+                    <span class="elemento-habilidad"><img src="../img/xmllogo.png" alt="xml">XML</span>
+                    <span class="elemento-habilidad"><img src="../img/markdownlogo.png" alt="markdown">MarkDown</span>
+                </div>
+
+                <div class="categoria-habilidad">
+                    <h3>Back-End</h3>
+                    <span class="elemento-habilidad"><img src="../img/javalogo.png" alt="java">Java</span>
+                    <span class="elemento-habilidad"><img src="../img/PHPlogo.png" alt="php">PHP</span>
+                </div>
+
+                <div class="categoria-habilidad">
+                    <h3>Bases de Datos</h3>
+                    <span class="elemento-habilidad"><img src="../img/mysqllogo.png" alt="mysql">MySQL</span>
+                </div>
+
+                <div class="categoria-habilidad">
+                    <h3>Gestión de la Información</h3>
+                    <span class="elemento-habilidad"><img src="../img/githublogo.jpg" alt="github">GitHub</span>
+                    <span class="elemento-habilidad"><img src="../img/gitlogo.png" alt="git">Git</span>
+                </div>
+
+                <div class="categoria-habilidad">
+                    <h3>Demás</h3>
+                    <span class="elemento-habilidad"><img src="../img/googlelogo.png" alt="googlewks">Google
+                        Workspace</span>
+                    <span class="elemento-habilidad"><img src="../img/clilogo.png" alt="clilinux">Linux Command
+                        Line</span>
+                </div>
+
+                <div class="categoria-habilidad">
+                    <h3>Idiomas</h3>
+                    <span class="elemento-habilidad">Español - Nativo</span>
+                    <span class="elemento-habilidad">Inglés - B2 EOI</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="seccion">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Contacto</h2>
+                <div class="rejilla-contacto">
+                    <div class="info-contacto">
+                        <h3>Información de Contacto</h3>
+                        <div class="item-contacto">
+                            <strong>Email:</strong>
+                            <p>personalyuseflaroussi@gmail.com</p>
+                        </div>
+                        <div class="item-contacto">
+                            <strong>Teléfono:</strong>
+                            <p>+34 722 29 33 32</p>
+                        </div>
+                        <div class="item-contacto">
+                            <strong>Carnet de conducir:</strong>
+                            <p>Tipo B - Desde junio de 2023</p>
+                        </div>
+                    </div>
+
+                    <div class="formulario-contacto">
+                        <h3>Envíame un mensaje</h3>
+                        <form>
+                            <input type="text" placeholder="Nombre" class="entrada-formulario">
+                            <input type="email" placeholder="Email" class="entrada-formulario">
+                            <textarea placeholder="Mensaje" class="area-texto-formulario"></textarea>
+                            <button type="submit" class="boton boton-primario">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <p>&copy; 2025 Yusef Laroussi de la Calle. Todos los derechos reservados.</p>
         </div>
-
-        <div class="ed2">
-            <h3>Grado Medio en Sistemas Microinformaticos y Redes - IES Valle del Jerte</h3>
-            <p>Plasencia, Caceres / 2021 - 2023</p>
-        </div>
-
-        <div class="ed3">
-            <h3>Grado Superior en Desarrollo de Aplicaciones Web - IES Valle del Jerte</h3>
-            <p>Plasencia, Caceres / 2023 - 2026</p>
-        </div>
-
-    </section>
-
-    <section id="experiencia">
-        <h2>Experiencia Laboral</h2>
-
-        <div class="exp1">
-            <h3>Asistente Tecnico Informatico</h3>
-            <p>IES Alagon / Marzo - Abril 2024</p>
-            <ul>
-                <li>Reparacion y mantenimiento de hardware de ordenadores.</li>
-                <li>Instalacion y configuracion de sistemas operativos.</li>
-                <li>Configuracion y administracion de software en Linux tanto mediante CLI como entorno grafico.</li>
-            </ul>
-        </div>
-
-        <div class="exp2">
-            <h3>Gerente de Medios Digitales y Redes Sociales</h3>
-            <p>Zanzi Homes / Abril - Mayo 2024</p>
-            <ul>
-                <li>Administrador de Redes Sociales, actualizando y editando contenido.</li>
-                <li>Programacion en HTML para firmas de correo electronico.</li>
-                <li>Edicion de fotos y creacion de contenido.</li>
-            </ul>
-        </div>
-
-        <div class="exp1">
-            <h3>Administrador de bases de datos</h3>
-            <p>Layer Electronics / Mayo - Junio 2025</p>
-            <ul>
-                <li>Gestion de la base de datos empresarial, utilizando Filemaker.</li>
-                <li>Diseno de interfaces mediante Filemaker.</li>
-                <li>Optimizacion mediante scripts de la base de datos.</li>
-            </ul>
-        </div>
-        
-    </section>
-
-    <section id="habilidades">
-        <h2>Habilidades</h2>
-        <ul>
-            <li>HTML/CSS</li>
-            <li>JavaScript</li>
-            <li>Photoshop</li>
-        </ul>
-    </section>
-
-    <section id="carnet">
-        <h2>Carnet de conducir</h2>
-        <p>Tipo B, AM, etc.</p>
-    </section>
-
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Email: ejemplo@correo.com</p>
-        <p>Teléfono: +34 123 456 789</p>
-    </section>
+    </footer>
 
 </body>
 
