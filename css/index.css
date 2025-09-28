@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap');
 
 :root {
-    --primary-black: #000000;
-    --primary-white: #ffffff;
+    --black: #000000;
+    --white: #ffffff;
     --gray-dark: #1a1a1a;
     --gray-medium: #2d2d2d;
     --gray-light: #404040;
@@ -10,19 +10,21 @@
 }
 
 @keyframes circle-in-hesitate {
-  0% {
-    clip-path: circle(0%);
-  }
-  40% {
-    clip-path: circle(40%);
-  }
-  100% {
-    clip-path: circle(125%);
-  }
+    0% {
+        clip-path: circle(0%);
+    }
+
+    40% {
+        clip-path: circle(40%);
+    }
+
+    100% {
+        clip-path: circle(125%);
+    }
 }
 
 [transition-style="in:circle:hesitate"] {
-  animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-hesitate both;
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-hesitate both;
 }
 
 * {
@@ -33,8 +35,84 @@
 
 body {
     font-family: 'Alan Sans', sans-serif;
-    background-color: var(--primary-black);
-    color: var(--primary-white);
+    background-color: var(--gray-dark);
+    color: var(--white);
     line-height: 1.6;
     scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.logo-nav {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+    margin-right: 40px;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    margin-top: 7px;
+}
+
+.menu-item {
+    color: var(--white);
+    position: relative;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 8px 0;
+    opacity: 1;
+    transition: var(--transition);
+}
+
+/* Transiciones menu navegacion */
+
+.menu-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #aa00ff;
+    transition: var(--transition);
+}
+
+.menu-item:hover:after {
+    width: 100%;
+}
+
+#nav-list:hover .menu-item {
+    opacity: 0.3;
+}
+
+#nav-list .menu-item:hover {
+    opacity: 1;
+}
+
+.seccion-inicio {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
