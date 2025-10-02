@@ -1,5 +1,5 @@
 /* === IMPORTACIÓN DE FUENTES === */
-@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 /* === VARIABLES GLOBALES === */
 :root {
@@ -24,7 +24,7 @@
 }
 
 body {
-    font-family: 'Alan Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     background: var(--black) url('../img/liquid-background.jpg') center center fixed;
     background-size: cover;
     color: var(--white);
@@ -121,6 +121,7 @@ body::before {
     font-size: 2.2rem;
     margin-bottom: 2rem;
     text-align: center;
+    font-weight: 700;
 }
 
 /* === SECCIÓN INICIO === */
@@ -142,16 +143,23 @@ body::before {
     width: 100%;
 }
 
-.sobre-mi-inicio {
+.nombre-contenedor {
     flex: 1;
     text-align: left;
     padding-left: 2rem;
+}
+
+.sobre-mi-inicio {
+    flex: 1;
+    text-align: right;
+    padding-right: 2rem;
 }
 
 .sobre-mi-inicio h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     color: var(--white);
+    font-weight: 600;
 }
 
 .sobre-mi-inicio p {
@@ -160,16 +168,11 @@ body::before {
     color: rgba(255, 255, 255, 0.85);
 }
 
-.nombre-contenedor {
-    flex: 1;
-    text-align: right;
-    padding-right: 2rem;
-}
-
 .nombre {
     font-size: 2.8rem;
     margin-bottom: 1rem;
-    font-family: 'Alan Sans', monospace;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid var(--white);
@@ -200,6 +203,7 @@ body::before {
     font-size: 1.6rem;
     margin-bottom: 2rem;
     opacity: 0;
+    font-weight: 400;
     animation: fadeIn 1s ease-in 3.5s forwards;
 }
 
@@ -211,7 +215,7 @@ body::before {
 
 .botones-seccion-inicio {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     gap: 1rem;
     flex-wrap: wrap;
 }
@@ -286,6 +290,7 @@ body::before {
     color: var(--white);
     margin-bottom: 0.8rem;
     font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .empresa-experiencia {
@@ -378,6 +383,7 @@ body::before {
     color: var(--white);
     margin-bottom: 1.2rem;
     font-size: 1.3rem;
+    font-weight: 600;
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     padding-bottom: 0.8rem;
 }
@@ -427,6 +433,46 @@ body::before {
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.info-contacto::before,
+.formulario-contacto::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+        rgba(255, 255, 255, 0.1) 0%, 
+        rgba(255, 255, 255, 0.05) 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.05) 75%,
+        rgba(255, 255, 255, 0.1) 100%
+    );
+    background-size: 200% 200%;
+    border-radius: 16px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    animation: borderGlow 3s ease infinite;
+}
+
+.info-contacto:hover::before,
+.formulario-contacto:hover::before {
+    opacity: 1;
+}
+
+@keyframes borderGlow {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
 }
 
 .info-contacto h3,
@@ -434,6 +480,7 @@ body::before {
     margin-bottom: 1.5rem;
     color: var(--white);
     font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .item-contacto {
@@ -445,6 +492,30 @@ body::before {
     -webkit-backdrop-filter: blur(10px) saturate(150%);
     border-radius: 8px;
     border-left: 3px solid var(--white);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.item-contacto::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.item-contacto:hover::after {
+    left: 100%;
+}
+
+.item-contacto:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(5px);
+    border-left-color: rgba(255, 255, 255, 0.8);
 }
 
 .item-contacto strong {
@@ -479,9 +550,22 @@ body::before {
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     color: var(--white);
-    font-family: inherit;
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
     transition: var(--transition);
+    position: relative;
+}
+
+.entrada-formulario::placeholder,
+.area-texto-formulario::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    transition: var(--transition);
+}
+
+.entrada-formulario:focus::placeholder,
+.area-texto-formulario:focus::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    transform: translateX(5px);
 }
 
 .entrada-formulario:focus,
@@ -491,7 +575,8 @@ body::before {
     background: rgba(10, 10, 10, 0.7);
     backdrop-filter: blur(25px) saturate(200%);
     -webkit-backdrop-filter: blur(25px) saturate(200%);
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1), 0 8px 24px rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
 }
 
 .area-texto-formulario {
@@ -505,6 +590,7 @@ body::before {
     padding: 14px 36px;
     font-size: 1rem;
     font-weight: 600;
+    font-family: 'Inter', sans-serif;
     color: var(--black);
     background: var(--white);
     border: 2px solid var(--white);
@@ -512,7 +598,7 @@ body::before {
     box-shadow: 0 4px 24px rgba(255, 255, 255, 0.2);
     cursor: pointer;
     text-decoration: none;
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -527,7 +613,7 @@ body::before {
     height: 100%;
     background: var(--black);
     opacity: 0;
-    transition: opacity 0.2s;
+    transition: opacity 0.3s;
     z-index: -1;
     border-radius: 50px;
 }
@@ -637,8 +723,8 @@ body::before {
         gap: 2rem;
     }
 
-    .sobre-mi-inicio,
-    .nombre-contenedor {
+    .nombre-contenedor,
+    .sobre-mi-inicio {
         padding: 0;
         text-align: center;
     }
