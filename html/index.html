@@ -16,7 +16,6 @@
         <h1 class="logo-nav">Yusef Laroussi de la Calle</h1>
         <ul class="nav-list" id="nav-list">
             <li><a href="#inicio" class="menu-item">Inicio</a></li>
-            <li><a href="#sobremi" class="menu-item">Sobre mí</a></li>
             <li><a href="#educacion" class="menu-item">Educación</a></li>
             <li><a href="#experiencia" class="menu-item">Experiencia</a></li>
             <li><a href="#habilidades" class="menu-item">Habilidades</a></li>
@@ -25,27 +24,22 @@
     </nav>
 
     <main>
-    <section class="inicio" id="inicio" data-transition-style="in:circle:hesitate">
-            <div class="container">
-                <h1 class="nombre">Yusef Laroussi de la Calle</h1>
-                <p class="subtitulo-seccion-inicio">Programador Junior & Técnico en Informática</p>
-                <div class="botones-seccion-inicio">
-                    <a href="#contacto" class="btn">Contáctame</a>
-                    <a href="#experiencia" class="btn">Ver experiencia</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="sobremi">
-            <div class="container">
-                <h2 class="titulo-seccion">Sobre mí</h2>
-                <div class="contenido-sobre-mi">
+        <section class="inicio" id="inicio" data-transition-style="in:circle:hesitate">
+            <div class="inicio-contenedor">
+                <div class="sobre-mi-inicio">
+                    <h2>Sobre mí</h2>
                     <p>Soy un programador junior, especializado en desarrollo front-end, con conocimientos adicionales
-                        en
-                        tecnologías back-end.
+                        en tecnologías back-end.
                         También cuento con amplia experiencia en hardware y software de ordenador. Me considero un
-                        profesional
-                        ambicioso y de rápido aprendizaje, con un gran deseo de crecer y asumir nuevos desafíos.</p>
+                        profesional ambicioso y de rápido aprendizaje, con un gran deseo de crecer y asumir nuevos desafíos.</p>
+                </div>
+                <div class="nombre-contenedor">
+                    <h1 class="nombre">Yusef Laroussi de la Calle</h1>
+                    <p class="subtitulo-seccion-inicio">Programador Junior & Técnico en Informática</p>
+                    <div class="botones-seccion-inicio">
+                        <a href="#contacto" class="btn">Contáctame</a>
+                        <a href="#experiencia" class="btn">Ver experiencia</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -116,47 +110,59 @@
             </div>
         </section>
 
-        <section id="habilidades" class="seccion fondo-gris">
+        <section id="habilidades" class="seccion">
             <div class="container">
                 <h2 class="titulo-seccion">Habilidades</h2>
-                <div class="categoria-habilidad">
-                    <h3>Front-End & Markup Languages</h3>
-                    <span class="elemento-habilidad"><img src="../img/html5logo.png" alt="html5">HTML</span>
-                    <span class="elemento-habilidad"><img src="../img/CSS3logo.png" alt="css3">CSS</span>
-                    <span class="elemento-habilidad"><img src="../img/javascriptlogo.png" alt="js">JavaScript</span>
-                    <span class="elemento-habilidad"><img src="../img/xmllogo.png" alt="xml">XML</span>
-                    <span class="elemento-habilidad"><img src="../img/markdownlogo.png" alt="markdown">MarkDown</span>
-                </div>
+                <div class="rejilla-habilidades">
+                    <div class="tarjeta-habilidad">
+                        <h3>Front-End & Markup Languages</h3>
+                        <ul class="lista-skills">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>XML</li>
+                            <li>MarkDown</li>
+                        </ul>
+                    </div>
 
-                <div class="categoria-habilidad">
-                    <h3>Back-End</h3>
-                    <span class="elemento-habilidad"><img src="../img/javalogo.png" alt="java">Java</span>
-                    <span class="elemento-habilidad"><img src="../img/PHPlogo.png" alt="php">PHP</span>
-                </div>
+                    <div class="tarjeta-habilidad">
+                        <h3>Back-End</h3>
+                        <ul class="lista-skills">
+                            <li>Java</li>
+                            <li>PHP</li>
+                        </ul>
+                    </div>
 
-                <div class="categoria-habilidad">
-                    <h3>Bases de Datos</h3>
-                    <span class="elemento-habilidad"><img src="../img/mysqllogo.png" alt="mysql">MySQL</span>
-                </div>
+                    <div class="tarjeta-habilidad">
+                        <h3>Bases de Datos</h3>
+                        <ul class="lista-skills">
+                            <li>MySQL</li>
+                        </ul>
+                    </div>
 
-                <div class="categoria-habilidad">
-                    <h3>Gestión de la Información</h3>
-                    <span class="elemento-habilidad"><img src="../img/githublogo.png" alt="github">GitHub</span>
-                    <span class="elemento-habilidad"><img src="../img/gitlogo.png" alt="git">Git</span>
-                </div>
+                    <div class="tarjeta-habilidad">
+                        <h3>Gestión de la Información</h3>
+                        <ul class="lista-skills">
+                            <li>GitHub</li>
+                            <li>Git</li>
+                        </ul>
+                    </div>
 
-                <div class="categoria-habilidad">
-                    <h3>Demás</h3>
-                    <span class="elemento-habilidad"><img src="../img/googlelogo.png" alt="googlewks">Google
-                        Workspace</span>
-                    <span class="elemento-habilidad"><img src="../img/clilogo.png" alt="clilinux">Linux Command
-                        Line</span>
-                </div>
+                    <div class="tarjeta-habilidad">
+                        <h3>Otros Conocimientos</h3>
+                        <ul class="lista-skills">
+                            <li>Google Workspace</li>
+                            <li>Linux Command Line</li>
+                        </ul>
+                    </div>
 
-                <div class="categoria-habilidad">
-                    <h3>Idiomas</h3>
-                    <span class="elemento-habilidad">Español - Nativo</span>
-                    <span class="elemento-habilidad">Inglés - B2 EOI</span>
+                    <div class="tarjeta-habilidad">
+                        <h3>Idiomas</h3>
+                        <ul class="lista-skills">
+                            <li>Español - Nativo</li>
+                            <li>Inglés - B2 EOI</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -201,6 +207,7 @@
         </div>
     </footer>
 
+    <script src="../js/index.js"></script>
 </body>
 
 </html>
