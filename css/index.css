@@ -1,7 +1,5 @@
-/* === IMPORTACIÓN DE FUENTES === */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
 
-/* === VARIABLES GLOBALES === */
 :root {
     --black: #000000;
     --white: #ffffff;
@@ -16,7 +14,6 @@
     --container-max-width: 1200px;
 }
 
-/* === RESET Y CONFIGURACIÓN BASE === */
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +21,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'SUSE', monospace;
     background: var(--black) url('../img/liquid-background.jpg') center center fixed;
     background-size: cover;
     color: var(--white);
@@ -52,7 +49,6 @@ body::before {
     padding: 0 20px;
 }
 
-/* === NAVEGACIÓN === */
 .navbar {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(10, 10, 10, 0.6) 50%, rgba(26, 26, 26, 0.5) 100%);
     display: flex;
@@ -112,7 +108,6 @@ body::before {
     width: 100%;
 }
 
-/* === SECCIONES GENERALES === */
 .seccion {
     padding: 60px 0;
 }
@@ -124,7 +119,6 @@ body::before {
     font-weight: 700;
 }
 
-/* === SECCIÓN INICIO === */
 .inicio {
     height: 100vh;
     display: flex;
@@ -163,40 +157,45 @@ body::before {
 }
 
 .sobre-mi-inicio p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.3rem;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
 }
 
 .nombre {
     font-size: 2.8rem;
     margin-bottom: 1rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'SUSE', monospace;
     font-weight: 800;
     white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid var(--white);
-    width: 0;
-    animation: typing 3s steps(30, end) 0.5s forwards, blink 0.75s step-end infinite;
     display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width: 0;
+    animation: typing 2s steps(22) forwards, blink-border 0.75s step-end infinite;
+    border-right: 3px solid var(--white);
 }
 
 @keyframes typing {
-    from {
-        width: 0;
-    }
     to {
         width: 100%;
     }
 }
 
-@keyframes blink {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
+@keyframes blink-border {
+    0%, 49% {
         border-color: var(--white);
     }
+    50%, 100% {
+        border-color: transparent;
+    }
+}
+
+.nombre.typing-complete {
+    border-right: none;
+    animation: none;
+    width: 100%;
 }
 
 .subtitulo-seccion-inicio {
@@ -204,7 +203,7 @@ body::before {
     margin-bottom: 2rem;
     opacity: 0;
     font-weight: 400;
-    animation: fadeIn 1s ease-in 3.5s forwards;
+    animation: fadeIn 0.8s ease-in 2.2s forwards;
 }
 
 @keyframes fadeIn {
@@ -218,9 +217,10 @@ body::before {
     justify-content: flex-start;
     gap: 1rem;
     flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in 3s forwards;
 }
 
-/* === EDUCACIÓN Y EXPERIENCIA === */
 #educacion,
 #experiencia {
     padding: 80px 0;
@@ -293,11 +293,23 @@ body::before {
     font-weight: 600;
 }
 
+.institucion-educacion,
 .empresa-experiencia {
     color: var(--white);
     font-weight: 600;
     margin-bottom: 0.5rem;
     opacity: 0.9;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icono-ubicacion {
+    width: 18px;
+    height: 18px;
+    color: var(--white);
+    stroke: var(--white);
+    flex-shrink: 0;
 }
 
 .fecha-educacion,
@@ -317,14 +329,26 @@ body::before {
 
 .lista-experiencia {
     margin-top: 1rem;
-    padding-left: 1.2rem;
+    padding-left: 0;
+    list-style: none;
 }
 
 .lista-experiencia li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
+    padding-left: 1.8rem;
+    position: relative;
+    line-height: 1.6;
 }
 
-/* === HABILIDADES === */
+.lista-experiencia li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
 #habilidades {
     padding: 80px 0;
     background: transparent;
@@ -397,20 +421,21 @@ body::before {
 .lista-skills li {
     color: rgba(255, 255, 255, 0.85);
     margin-bottom: 0.8rem;
-    padding-left: 1.2rem;
+    padding-left: 1.8rem;
     position: relative;
     font-size: 1rem;
+    line-height: 1.6;
 }
 
 .lista-skills li::before {
-    content: '▹';
+    content: '▸';
     position: absolute;
     left: 0;
     color: var(--white);
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
-/* === CONTACTO === */
 #contacto {
     padding: 80px 0;
     background: transparent;
@@ -459,11 +484,6 @@ body::before {
     opacity: 0;
     transition: opacity 0.3s ease;
     animation: borderGlow 3s ease infinite;
-}
-
-.info-contacto:hover::before,
-.formulario-contacto:hover::before {
-    opacity: 1;
 }
 
 @keyframes borderGlow {
@@ -550,10 +570,35 @@ body::before {
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     color: var(--white);
-    font-family: 'Inter', sans-serif;
+    font-family: 'SUSE', monospace;
     font-size: 1rem;
     transition: var(--transition);
     position: relative;
+    overflow: hidden;
+}
+
+.entrada-formulario::after,
+.area-texto-formulario::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+    pointer-events: none;
+}
+
+.entrada-formulario:hover::after,
+.area-texto-formulario:hover::after {
+    left: 100%;
+}
+
+.entrada-formulario:hover,
+.area-texto-formulario:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(26, 26, 26, 0.6);
 }
 
 .entrada-formulario::placeholder,
@@ -584,16 +629,15 @@ body::before {
     min-height: 140px;
 }
 
-/* === BOTONES === */
 .btn {
     display: inline-block;
     padding: 14px 36px;
     font-size: 1rem;
     font-weight: 600;
-    font-family: 'Inter', sans-serif;
-    color: var(--black);
-    background: var(--white);
-    border: 2px solid var(--white);
+    font-family: 'SUSE', monospace;
+    color: var(--white);
+    background: linear-gradient(135deg, #000000 0%, #3a3a3a 50%, #ffffff 100%);
+    border: none;
     border-radius: 50px;
     box-shadow: 0 4px 24px rgba(255, 255, 255, 0.2);
     cursor: pointer;
@@ -601,31 +645,12 @@ body::before {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
-    z-index: 1;
-}
-
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--black);
-    opacity: 0;
-    transition: opacity 0.3s;
-    z-index: -1;
-    border-radius: 50px;
 }
 
 .btn:hover {
-    color: var(--white);
+    background: linear-gradient(135deg, #1a1a1a 0%, #5a5a5a 50%, #ffffff 100%);
     transform: translateY(-4px) scale(1.05);
     box-shadow: 0 12px 40px rgba(255, 255, 255, 0.3);
-}
-
-.btn:hover::before {
-    opacity: 1;
 }
 
 .btn:active {
@@ -633,18 +658,28 @@ body::before {
     box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
 }
 
-/* === PIE DE PÁGINA === */
 .pie-pagina {
     background-color: var(--black);
     text-align: center;
-    padding: 30px 0;
-    font-size: 0.9rem;
+    padding: 20px 0;
+    font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.6);
     margin-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* === EFECTO DE BRILLO EN TARJETAS (EDUCACIÓN, EXPERIENCIA Y HABILIDADES) === */
+.pie-pagina p {
+    margin: 0.2rem 0;
+    font-weight: 400;
+}
+
+.footer-tech {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 300;
+    margin-top: 0.3rem;
+}
+
 .elemento-educacion,
 .elemento-experiencia,
 .tarjeta-habilidad {
@@ -673,7 +708,6 @@ body::before {
     opacity: 1;
 }
 
-/* === ANIMACIONES === */
 @keyframes gradient-shift {
     0% {
         background-position: 0% 50%;
@@ -686,7 +720,6 @@ body::before {
     }
 }
 
-/* === SCROLL BAR PERSONALIZADA === */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -704,7 +737,6 @@ body::before {
     background: rgba(255, 255, 255, 0.9);
 }
 
-/* === RESPONSIVE === */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -766,7 +798,6 @@ body::before {
     .info-contacto,
     .formulario-contacto,
     .tarjeta-habilidad {
-        /* Desactivar efectos 3D en móvil */
         transform: none !important;
     }
 }

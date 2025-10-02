@@ -1,6 +1,4 @@
-// ===== EFECTO DE SEGUIMIENTO DEL RATÓN EN TARJETAS =====
 document.addEventListener('DOMContentLoaded', () => {
-    // Seleccionar solo tarjetas de educación, experiencia y habilidades para efecto 3D
     const cards3D = document.querySelectorAll('.elemento-educacion, .elemento-experiencia, .tarjeta-habilidad');
     
     cards3D.forEach(card => {
@@ -25,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // ===== EFECTO DE BRILLO SIGUIENDO EL CURSOR (EDUCACIÓN, EXPERIENCIA Y HABILIDADES) =====
     const glowCards = document.querySelectorAll('.elemento-educacion, .elemento-experiencia, .tarjeta-habilidad');
     
     glowCards.forEach(card => {
@@ -39,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // ===== ANIMACIÓN DE APARICIÓN AL HACER SCROLL =====
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -54,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
     
-    // Observar elementos
     const animatedElements = document.querySelectorAll('.elemento-educacion, .elemento-experiencia, .tarjeta-habilidad');
     
     animatedElements.forEach(el => {
@@ -64,26 +59,14 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
     
-    // ===== ANIMACIÓN DE ESCRITURA PARA EL NOMBRE =====
     const nombre = document.querySelector('.nombre');
-    const subtitulo = document.querySelector('.subtitulo-seccion-inicio');
     
     if (nombre) {
-        // Mantener el texto visible para la animación CSS
-        nombre.style.display = 'inline-block';
-    }
-    
-    // Animar los botones después del subtítulo
-    const botones = document.querySelector('.botones-seccion-inicio');
-    if (botones) {
-        botones.style.opacity = '0';
         setTimeout(() => {
-            botones.style.transition = 'opacity 1s ease';
-            botones.style.opacity = '1';
-        }, 4500);
+            nombre.classList.add('typing-complete');
+        }, 2000);
     }
     
-    // ===== EFECTO PARALLAX SUAVE EN LA NAVEGACIÓN =====
     let lastScroll = 0;
     const navbar = document.querySelector('.navbar');
     
@@ -99,7 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
         lastScroll = currentScroll;
     }, { passive: true });
     
-    // ===== SMOOTH SCROLL PARA LOS ENLACES DE NAVEGACIÓN =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
