@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --black: #000000;
@@ -21,7 +21,7 @@
 }
 
 body {
-    font-family: 'SUSE', monospace;
+    font-family: 'Saira', sans-serif;
     background: var(--black) url('../img/liquid-background.jpg') center center fixed;
     background-size: cover;
     color: var(--white);
@@ -157,16 +157,16 @@ body::before {
 }
 
 .sobre-mi-inicio p {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     line-height: 1.9;
     color: rgba(255, 255, 255, 0.9);
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .nombre {
     font-size: 2.8rem;
     margin-bottom: 1rem;
-    font-family: 'SUSE', monospace;
+    font-family: 'Saira', sans-serif;
     font-weight: 800;
     white-space: nowrap;
     display: inline-block;
@@ -184,10 +184,14 @@ body::before {
 }
 
 @keyframes blink-border {
-    0%, 49% {
+
+    0%,
+    49% {
         border-color: var(--white);
     }
-    50%, 100% {
+
+    50%,
+    100% {
         border-color: transparent;
     }
 }
@@ -257,7 +261,6 @@ body::before {
     transition: var(--transition);
     position: relative;
     overflow: hidden;
-    cursor: pointer;
     flex: 1;
 }
 
@@ -376,7 +379,6 @@ body::before {
     transition: var(--transition);
     position: relative;
     overflow: hidden;
-    cursor: pointer;
     flex: 1;
     min-width: 280px;
     max-width: 400px;
@@ -471,13 +473,12 @@ body::before {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(45deg, 
-        rgba(255, 255, 255, 0.1) 0%, 
-        rgba(255, 255, 255, 0.05) 25%,
-        transparent 50%,
-        rgba(255, 255, 255, 0.05) 75%,
-        rgba(255, 255, 255, 0.1) 100%
-    );
+    background: linear-gradient(45deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0.05) 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.05) 75%,
+            rgba(255, 255, 255, 0.1) 100%);
     background-size: 200% 200%;
     border-radius: 16px;
     z-index: -1;
@@ -487,9 +488,12 @@ body::before {
 }
 
 @keyframes borderGlow {
-    0%, 100% {
+
+    0%,
+    100% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
@@ -570,7 +574,7 @@ body::before {
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     color: var(--white);
-    font-family: 'SUSE', monospace;
+    font-family: 'Saira', sans-serif;
     font-size: 1rem;
     transition: var(--transition);
     position: relative;
@@ -634,7 +638,7 @@ body::before {
     padding: 14px 36px;
     font-size: 1rem;
     font-weight: 600;
-    font-family: 'SUSE', monospace;
+    font-family: 'Saira', sans-serif;
     color: var(--white);
     background: linear-gradient(135deg, #000000 0%, #3a3a3a 50%, #ffffff 100%);
     border: none;
@@ -712,9 +716,11 @@ body::before {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
@@ -777,7 +783,7 @@ body::before {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
+
     .rejilla-educacion,
     .rejilla-experiencia,
     .rejilla-habilidades {
@@ -792,7 +798,7 @@ body::before {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .elemento-educacion,
     .elemento-experiencia,
     .info-contacto,
