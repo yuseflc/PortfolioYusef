@@ -663,13 +663,15 @@ body::before {
 }
 
 .pie-pagina {
-    background-color: var(--black);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(10, 10, 10, 0.6) 50%, rgba(26, 26, 26, 0.5) 100%);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
     text-align: center;
     padding: 20px 0;
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.6);
     margin-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .pie-pagina p {
@@ -735,12 +737,14 @@ body::before {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(58, 58, 58, 0.8));
+    background: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.9);
+    background: #1a1a1a;
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 @media (max-width: 768px) {
@@ -806,4 +810,15 @@ body::before {
     .tarjeta-habilidad {
         transform: none !important;
     }
+}
+
+/* Estilos para enlaces en la sección de educación */
+.institucion-educacion a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.institucion-educacion a:hover {
+    opacity: 0.8;
 }
