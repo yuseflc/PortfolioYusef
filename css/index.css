@@ -807,3 +807,14 @@ body::before {
         transform: none !important;
     }
 }
+
+/* Estilos para enlaces en la sección de educación */
+.institucion-educacion a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.institucion-educacion a:hover {
+    opacity: 0.8;
+}
