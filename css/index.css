@@ -224,6 +224,13 @@ body::before {
     }
 }
 
+.ampersand {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.6rem;
+    font-weight: 500;
+    opacity: 0.95;
+}
+
 .botones-seccion-inicio {
     display: flex;
     justify-content: flex-start;
@@ -768,22 +775,15 @@ body::before {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 0px;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(10, 10, 10, 0.5);
+    background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #000000;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #1a1a1a;
-    border-color: rgba(255, 255, 255, 0.5);
+    background: transparent;
 }
 
 @media (max-width: 768px) {
